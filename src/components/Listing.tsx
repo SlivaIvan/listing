@@ -3,7 +3,7 @@ import { IItems } from '../interface/items'
 import { Item } from './Item'
 
 export const Listing = () => {  
-    const items: IItems[] = data.filter(item => item.state === 'active')
+    const items: IItems[] = JSON.parse(JSON.stringify(data.filter(i => i.state === 'active')))
     return(
         <div className="item-list">
             {
